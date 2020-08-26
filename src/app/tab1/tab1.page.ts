@@ -24,10 +24,6 @@ export class Tab1Page implements OnInit {
   ngOnInit(){}
 
   registerUser() {
-    let postData = {
-            "name": "ionicposttestuser",
-            "password": "customer004@email.com"
-    }
 
     this.http.post("http://localhost:3000/users", this.userForm.value, {})
       .then(data => {
