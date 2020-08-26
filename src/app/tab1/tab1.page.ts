@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HTTP } from '@ionic-native/http/ngx';
+import { FormGroup, FormBuilder } from "@angular/forms";
 
 
 @Component({
@@ -9,17 +10,26 @@ import { HTTP } from '@ionic-native/http/ngx';
 })
 export class Tab1Page implements OnInit {
 
-  constructor(public http: HTTP) {
+  userForm: FormGroup;
+
+  constructor(
+    public http: HTTP,
+    public fb: FormBuilder) { 
+      this.userForm = this.fb.group({
+        name: [''],
+        password: ['']
+      })
   }
+
   ngOnInit(){}
 
-  sendPostRequest() {
+  registerUser() {
     let postData = {
             "name": "ionicposttestuser",
             "password": "customer004@email.com"
     }
 
-    this.http.post("http://localhost:3000/users", postData, {})
+    this.http.post("http://localhost:3000/users", this.userForm.value, {})
       .then(data => {
         console.log(data['_body']);
        }, error => {

@@ -15,9 +15,32 @@
 
   <app-explore-container name="Tab 1 page"></app-explore-container>
   
-    <p>
+    <ion-label position="floating">
         Sending a POST Request Example with Ionic 5
-    </p>
-    <button ion-button (click)="sendPostRequest()">Post Data</button>
+    </ion-label>
+    <button ion-button (click)="registerUser()">Post Data</button>
+</ion-content>
+
+<ion-content>
+  <ion-list lines="full" class="ion-no-margin ion-no-padding ios list-ios list-lines-full list-ios-lines-full hydrated">
+    <form [formGroup]="userForm" (ngSubmit)="registerUser()">
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="name" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input formControlName="password" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" shape="full" expand="block">Register</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
 </ion-content>
 
