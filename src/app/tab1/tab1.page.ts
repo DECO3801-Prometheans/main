@@ -16,7 +16,7 @@ export class Tab1Page implements OnInit {
   sendPostRequest() {
     let postData = {
             "name": "ionicposttestuser",
-            "pass": "customer004@email.com"
+            "password": "customer004@email.com"
     }
 
     this.http.post("http://localhost:3000/users", postData, {})
