@@ -18,7 +18,7 @@
 
 <ion-content>
   <ion-list lines="full" class="ion-no-margin ion-no-padding ios list-ios list-lines-full list-ios-lines-full hydrated">
-    <form [formGroup]="userForm" (ngSubmit)="login()">
+    <form [formGroup]="userForm" (ngSubmit)="_login()">
       <ion-item>
         <ion-label position="floating">Email</ion-label>
         <ion-input formControlName="name" type="text" required></ion-input>
