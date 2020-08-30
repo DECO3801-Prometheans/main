@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HTTP } from '@ionic-native/http/ngx';
+import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormBuilder } from "@angular/forms";
 
 
@@ -13,7 +13,7 @@ export class RegisterPage implements OnInit {
   userForm: FormGroup;
 
   constructor(
-    public http: HTTP,
+    public http: HttpClient,
     public fb: FormBuilder) { 
       this.userForm = this.fb.group({
         name: [''],
@@ -26,10 +26,11 @@ export class RegisterPage implements OnInit {
   registerUser() {
 
     this.http.post("http://localhost:3000/users", this.userForm.value, {})
-      .then(data => {
-        console.log(data['_body']);
+      .subscribe(data => {
+        console.log(data);
        }, error => {
-        console.log(error);
+        console.log(error.error.message);
+        window.confirm(error.error.message);
       });
   }
 }
