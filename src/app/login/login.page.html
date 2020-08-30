@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,16 +9,16 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Login</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <app-explore-container name="Login"></app-explore-container>
 </ion-content>
 
 <ion-content>
   <ion-list lines="full" class="ion-no-margin ion-no-padding ios list-ios list-lines-full list-ios-lines-full hydrated">
-    <form [formGroup]="userForm" (ngSubmit)="_login()">
+    <form [formGroup]="userForm" (ngSubmit)="login()">
       <ion-item>
         <ion-label position="floating">Email</ion-label>
         <ion-input formControlName="name" type="text" required></ion-input>
