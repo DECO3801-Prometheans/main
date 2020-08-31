@@ -17,7 +17,7 @@ export class LoginPage implements OnInit {
     public http: HttpClient,
     ) { 
       this.userForm = this.fb.group({
-        name: [''],
+        email: [''],
         password: ['']
       })
   }

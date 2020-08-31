@@ -9,11 +9,11 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar *ngFor="let user of users">
-      <ion-title size="large">Name: {{user}}</ion-title>
+      <ion-title size="large">Welcome {{user}}</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <app-explore-container name="Welcome to your profile"></app-explore-container>
+
   <ion-button (click)="logout()">Logout</ion-button>
-  
 </ion-content>

@@ -6,27 +6,35 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Register</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <app-explore-container name="Register"></app-explore-container>
-</ion-content>
-
 <ion-content>
   <ion-list lines="full" class="ion-no-margin ion-no-padding ios list-ios list-lines-full list-ios-lines-full hydrated">
     <form [formGroup]="userForm" (ngSubmit)="registerUser()">
       <ion-item>
+        <ion-label position="floating">First Name</ion-label>
+        <ion-input formControlName="first_name" type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Last Name</ion-label>
+        <ion-input formControlName="last_name" type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
         <ion-label position="floating">Email</ion-label>
-        <ion-input formControlName="name" type="text" required></ion-input>
+        <ion-input formControlName="email" type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Mobile</ion-label>
+        <ion-input formControlName="mobile" type="text" required></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Password</ion-label>
         <ion-input formControlName="password" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Confirm Password</ion-label>
+        <ion-input type="text" required>
         </ion-input>
       </ion-item>
 

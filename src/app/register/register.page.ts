@@ -16,7 +16,10 @@ export class RegisterPage implements OnInit {
     public http: HttpClient,
     public fb: FormBuilder) { 
       this.userForm = this.fb.group({
-        name: [''],
+        first_name: [''],
+        last_name: [''],
+        email: [''],
+        mobile: [''],
         password: ['']
       })
   }
