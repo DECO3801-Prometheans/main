@@ -17,7 +17,10 @@ export class UserService {
     private http: HttpClient,
     private storage: Storage,
     private env: EnvService,
-    ) { }
+    ) {
+      storage.ready().then(() => {
+    }); 
+  }
 
 
   login(email: String, password: String) {
