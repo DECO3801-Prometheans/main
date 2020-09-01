@@ -21,7 +21,7 @@ export class UserService {
 
 
   login(email: String, password: String) {
-    return this.http.post(this.env.API_URL + '/login',
+    return this.http.post(this.env.API_URL + '/users/login',
       {email: email, password: password}
     ).pipe(
       token => {

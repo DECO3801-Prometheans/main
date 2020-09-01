@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormBuilder } from "@angular/forms";
-import * as jwt from 'jsonwebtoken';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -27,6 +26,12 @@ export class LoginPage implements OnInit {
   ngOnInit(){}
 
   login() {
-    this.userService.login(this.userForm.value.email, this.userForm.value.password);
+    this.userService.login(this.userForm.value.email, this.userForm.value.password)
+    .subscribe(done => {
+        console.log(done);
+      }, error => {
+        console.log(error.error.message);
+        window.confirm(error.error.message);
+      });
   }
 }

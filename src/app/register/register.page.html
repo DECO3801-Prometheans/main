@@ -8,7 +8,7 @@
 
 <ion-content>
   <ion-list lines="full" class="ion-no-margin ion-no-padding ios list-ios list-lines-full list-ios-lines-full hydrated">
-    <form [formGroup]="userForm" (ngSubmit)="registerUser()">
+    <form [formGroup]="userForm" (ngSubmit)="register()">
       <ion-item>
         <ion-label position="floating">First Name</ion-label>
         <ion-input formControlName="first_name" type="text" required></ion-input>
