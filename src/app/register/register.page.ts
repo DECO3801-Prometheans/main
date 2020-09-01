@@ -18,6 +18,7 @@ export class RegisterPage implements OnInit {
       this.userForm = this.fb.group({
         first_name: [''],
         last_name: [''],
+        type: [''],
         email: [''],
         mobile: [''],
         password: ['']

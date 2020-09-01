@@ -18,6 +18,13 @@
         <ion-input formControlName="last_name" type="text" required></ion-input>
       </ion-item>
       <ion-item>
+        <ion-label position="floating">Type</ion-label>
+        <ion-select formControlName="type" required>
+          <ion-select-option value="farmer">Farmer</ion-select-option>
+          <ion-select-option value="customer">Customer</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
         <ion-label position="floating">Email</ion-label>
         <ion-input formControlName="email" type="text" required></ion-input>
       </ion-item>
