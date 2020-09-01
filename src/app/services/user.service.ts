@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { EnvService } from './env.service';
-import { NativeStorage } from '@ionic-native/native-storage/ngx';
+import { Storage } from '@ionic/storage';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class UserService {
 
   constructor(
     private http: HttpClient,
-    private storage: NativeStorage,
+    private storage: Storage,
     private env: EnvService,
     ) { }
 
@@ -25,7 +25,7 @@ export class UserService {
       {email: email, password: password}
     ).pipe(
       token => {
-        this.storage.setItem('token', token)
+        this.storage.set('token', token)
         .then(
           () => {
             console.log('Token Stored');
@@ -61,7 +61,7 @@ export class UserService {
   }
 
   getToken() {
-    return this.storage.getItem('token').then(
+    return this.storage.get('token').then(
       data => {
         this.token = data;
         if(this.token != null) {

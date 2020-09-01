@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormBuilder } from "@angular/forms";
 import * as jwt from 'jsonwebtoken';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +16,7 @@ export class LoginPage implements OnInit {
   constructor(
     public fb: FormBuilder,
     public http: HttpClient,
+    private userService: UserService
     ) { 
       this.userForm = this.fb.group({
         email: [''],
@@ -25,14 +27,6 @@ export class LoginPage implements OnInit {
   ngOnInit(){}
 
   login() {
-    this.http.post("http://localhost:3000/users/login", this.userForm.value)
-    .subscribe(done => {
-        localStorage.setItem('token', JSON.stringify(done));
-        localStorage.setItem('username', this.userForm.value.name);
-        console.log(done);
-      }, error => {
-        console.log(error.error.message);
-        window.confirm(error.error.message);
-      });
+    this.userService.login(this.userForm.value.email, this.userForm.value.password);
   }
 }
