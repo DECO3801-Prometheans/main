@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { tap } from 'rxjs/operators';
 import { EnvService } from './env.service';
 import { Storage } from '@ionic/storage';
 
@@ -27,18 +27,19 @@ export class UserService {
     return this.http.post(this.env.API_URL + '/users/login',
       {email: email, password: password}
     ).pipe(
-      token => {
+      tap(token => {
         this.storage.set('token', token)
         .then(
           () => {
             console.log('Token Stored');
+            console.log(this.storage.get('token').then ( data => console.log(data['_id'])));
           },
           error => console.error('Error storing item', error)
         );
         this.token = token;
         this.isLoggedIn = true;
         return token;
-      },
+      }),
     );
   }
 
@@ -52,7 +53,7 @@ export class UserService {
     const headers = new HttpHeaders({
       'Authorization': this.token["token_type"]+" "+this.token["access_token"]
     });
-    return this.http.get(this.env.API_URL + 'auth/logout', { headers: headers })
+    return this.http.get(this.env.API_URL + '/logout', { headers: headers })
     .pipe(
       data => {
         this.storage.remove("token");
@@ -78,5 +79,12 @@ export class UserService {
         this.isLoggedIn=false;
       }
     );
+  }
+
+  getUser() {
+    var id = this.getToken().then( data => {
+    return data});
+    console.log(this.env.API_URL + '/users/' + id)
+    return this.http.get(this.env.API_URL + '/users/' + this.getToken()['_id']);
   }
 }

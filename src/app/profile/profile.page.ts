@@ -1,21 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-profile',
   templateUrl: 'profile.page.html',
   styleUrls: ['profile.page.scss']
 })
-export class ProfilePage {
+export class ProfilePage implements OnInit {
 
   users: Array<string>;
 
-  constructor() {
+  constructor(
+    private userService: UserService
+    ) {
       this.users = [localStorage.getItem('username')];
+  }
+
+  ngOnInit(){
+    console.log(this.userService.getUser());
   }
  
   logout() {
-      localStorage.removeItem('username');
-      localStorage.removeItem('token');
-      console.log('loggingout')
+      this.userService.logout();
   }
 }
