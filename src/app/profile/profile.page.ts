@@ -17,7 +17,9 @@ export class ProfilePage implements OnInit {
   }
 
   ngOnInit(){
-    this.userService.getUser();
+    this.userService.getUser().subscribe(data => {
+      console.log(data);
+    })
   }
  
   logout() {

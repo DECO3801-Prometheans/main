@@ -32,7 +32,6 @@ export class UserService {
         .then(
           () => {
             console.log('Token Stored');
-            console.log(this.storage.get('token').then ( data => console.log(data['_id'])));
           },
           error => console.error('Error storing item', error)
         );
@@ -67,7 +66,6 @@ export class UserService {
   getToken() {
     return this.storage.get('token').then(
       data => {
-        console.log(data);
         this.token = data;
         if(this.token != null) {
           this.isLoggedIn=true;
@@ -82,7 +80,7 @@ export class UserService {
     );
   }
 
-  async getUser() {
+  getUser() {
     console.log(this.token['_id']);
     return this.http.get(this.env.API_URL + '/users/' + this.token['_id']);
   }
