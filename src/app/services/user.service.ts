@@ -67,6 +67,7 @@ export class UserService {
   getToken() {
     return this.storage.get('token').then(
       data => {
+        console.log(data);
         this.token = data;
         if(this.token != null) {
           this.isLoggedIn=true;
@@ -81,10 +82,8 @@ export class UserService {
     );
   }
 
-  getUser() {
-    var id = this.getToken().then( data => {
-    return data});
-    console.log(this.env.API_URL + '/users/' + id)
-    return this.http.get(this.env.API_URL + '/users/' + this.getToken()['_id']);
+  async getUser() {
+    console.log(this.token['_id']);
+    return this.http.get(this.env.API_URL + '/users/' + this.token['_id']);
   }
 }
