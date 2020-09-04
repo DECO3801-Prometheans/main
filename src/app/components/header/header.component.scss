@@ -1,0 +1,20 @@
+ion-header{
+    .head-bar{
+        background: green;
+        display: flex;
+        ion-select {
+            color: white;
+            --width: 30vw;
+            --font-size: 30px;
+        }
+        ion-button {
+            --background: green;
+            --background-activated: green;
+            --padding-start: 5px;
+            --padding-end: 5px;
+        }
+        ion-searchbar{
+            --width: 40vw;
+        }
+    }
+}
