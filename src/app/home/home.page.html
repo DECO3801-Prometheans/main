@@ -32,4 +32,20 @@
             <ion-row><div>Grains</div></ion-row>
         </ion-col>
     </ion-row>
+    <div class="best-sellers-section">
+        <ion-row class="best-sellers-title">
+            <h3>Best Sellers</h3>
+        </ion-row>
+        <ion-row class="best-sellers-row" *ngFor="let row of best_sellers">
+           <div>
+            <ion-col *ngFor="let item of row">
+                <img [src]="item.img">
+                <p>{{item.brief}}</p>
+                <p class="price">
+                   AU {{item.price | currency}}
+                </p>
+            </ion-col>
+           </div>
+        </ion-row>
+    </div>
 </ion-content>

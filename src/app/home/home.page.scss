@@ -4,11 +4,64 @@
 
 .section {
     width: 18vw;
-    height: 18vw;
+    height: 23vw;
+    img {
+        width: 17vw;
+        height: 17vw;
+    }
     ion-row {
         div {
             margin: auto;
         }
-        font-size: 2vw;
+        font-size: 2.5vw;
+        color: #AFAFAF;
+        font-weight: bold;
+    }
+    margin-bottom: 4vh;
+}
+
+.best-sellers-section {
+    background: #99ffbc;
+    padding-bottom: 3vh;
+    .best-sellers-title{
+        h3 {
+            margin-left: 6vw;
+            font-weight: bold;
+            color: #41AC3C;
+        }
+    }
+    .best-sellers-row {
+        div {
+            margin: auto;
+            width: 90vw;
+            height: 20vh;
+            display: flex;
+            justify-content: space-around;
+            ion-col {
+                --height:  35vw;
+                img {
+                    margin: auto;
+                    width: 28vw;
+                    height: 20vw;
+                    border-radius: 2vw;
+                }
+                p {
+                    width: 28vw;
+                    font-size: 3.2vw;
+                    color: #41AC3C;
+                    font-weight: bold;
+                    margin: 0;
+                    text-align: center;
+                }
+                .price{
+                    width: 28vw;
+                    font-size: 4vw;
+                    color: #41AC3C;
+                    font-weight: bold;
+                    margin: 0;
+                    text-align: center;
+                }
+            }
+        }
     }
 }
