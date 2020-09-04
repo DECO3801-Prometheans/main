@@ -37,7 +37,6 @@ export class HeaderComponent implements OnInit {
       {
         text: 'Confirm',
         handler: (event) => {
-          console.log(event.Area.value);
           this.area = this.areas[event.Area.value];
         } 
       }

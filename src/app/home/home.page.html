@@ -1,5 +1,35 @@
 <app-header></app-header>
 
 <ion-content>
-
+    <ion-slides>
+        <ion-slide *ngFor="let item of slides">
+            <ion-row size="12">
+                <ion-col class="slide-col">
+                  <img [src]="item">
+                </ion-col>
+            </ion-row>
+        </ion-slide>
+    </ion-slides>
+    <ion-row size="12">
+        <ion-col class="section">
+            <img src="../../assets/imgs/food 1.JPG">
+            <ion-row><div>Dairy</div></ion-row>
+        </ion-col>
+        <ion-col class="section">
+            <img src="../../assets/imgs/meat.JPG">
+            <ion-row><div>Protein</div></ion-row>
+        </ion-col>
+        <ion-col class="section">
+            <img  src="../../assets/imgs/fruit.JPG">
+            <ion-row><div>Fruit</div></ion-row>
+        </ion-col>
+        <ion-col class="section">
+            <img src="../../assets/imgs/veg.JPG">
+            <ion-row><div>Vegetable</div></ion-row>
+        </ion-col>
+        <ion-col class="section">
+            <img src="../../assets/imgs/grain.JPG">
+            <ion-row><div>Grains</div></ion-row>
+        </ion-col>
+    </ion-row>
 </ion-content>
