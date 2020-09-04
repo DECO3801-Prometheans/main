@@ -8,6 +8,7 @@ import { UtilsService } from '../../services/utils.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  public keyWord = '';
   public area = 'Area';
   public areas = [
     'Brisbane',
@@ -50,4 +51,13 @@ export class HeaderComponent implements OnInit {
     await this.utils.openPicker(colums, buttons);
   }
 
+  _change(e) {
+   this.keyWord = e.detail.value;
+  }
+
+  searchItems(e) {
+    if(e.code === 'Enter') {
+      console.log(this.keyWord, e.code);
+    }
+  }
 }
