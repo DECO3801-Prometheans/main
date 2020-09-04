@@ -1,0 +1,47 @@
+ion-card {
+    ion-item {
+        ion-avatar {
+            --border-radius: 2vw;
+            width: 13vw;
+            height: 13vw;
+        }
+        ion-label{
+            h2 {
+                color: #41AC3C;
+                font-weight: bold;
+                font-weight: 2vw;
+            }
+            section {
+                ion-button {
+                    --background: #41AC3C;
+                    ion-label {
+                        color: white;
+                        font-size: 1vw;
+                    }
+                }
+            }
+        }
+    }
+    ion-card-content {
+        div {
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            ion-col {
+                img {
+                    margin: auto;
+                    width: 25vw;
+                    height: 20vw;
+                    border-radius: 1.6vw;
+                }
+                p {
+                    font-size: 3.2vw;
+                    color: #41AC3C;
+                    font-weight: bold;
+                    margin: 0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

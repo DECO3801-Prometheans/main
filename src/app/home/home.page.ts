@@ -11,7 +11,7 @@ export class HomePage implements OnInit {
     '../../assets/imgs/types-of-fuit-hero-e1559313183734.jpg',
     '../../assets/imgs/types-of-fuit-hero-e1559313183734.jpg',
     '../../assets/imgs/types-of-fuit-hero-e1559313183734.jpg'
-  ]
+  ];
 
   public best_sellers = [
     [
@@ -30,7 +30,7 @@ export class HomePage implements OnInit {
       {img: '../../assets/imgs/best-seller/spanish.PNG', 
         brief: 'hufids oifsdjiof oisdjfoi', price: 14.6}, 
     ],
-  ]
+  ];
 
   public bargains = [
     [
@@ -49,6 +49,66 @@ export class HomePage implements OnInit {
       {img: '../../assets/imgs/best-seller/spanish.PNG', 
         brief: 'hufids oifsdj', price: 14.6, discount: 0.5}, 
     ],
+  ];
+
+  public farmers = [
+    {
+      avatar: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+      name: 'Lorem ipsum',
+      labels: ['label1', 'label2', 'label3'],
+      products: [
+        {
+          'img': '../../assets/imgs/best-seller/brocli.PNG',
+          'name': 'sdfasd',
+        },
+        {
+          'img': '../../assets/imgs/best-seller/carrot.PNG',
+          'name': 'sdfasd',
+        },
+        {
+          'img': '../../assets/imgs/best-seller/tomato2.PNG',
+          'name': 'wfhtyhr',
+        },
+      ],
+    },
+    {
+      avatar: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+      name: 'Lorew rewum',
+      labels: ['label1', 'label2', 'label3'],
+      products: [
+        {
+          'img': '../../assets/imgs/best-seller/onion.PNG',
+          'name': 'fwewe',
+        },
+        {
+          'img': '../../assets/imgs/best-seller/corn.PNG',
+          'name': 'sdfwe',
+        },
+        {
+          'img': '../../assets/imgs/best-seller/spanish.PNG',
+          'name': 'dsfwe',
+        },
+      ],
+    },
+    {
+      avatar: 'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y',
+      name: 'Dwffdw fowd',
+      labels: ['label1', 'label2', 'label3'],
+      products: [
+        {
+          'img': '../../assets/imgs/best-seller/carrot.PNG',
+          'name': 'wefwf',
+        },
+        {
+          'img': '../../assets/imgs/best-seller/brocli.PNG',
+          'name': 'edfwdfw',
+        },
+        {
+          'img': '../../assets/imgs/best-seller/onion.PNG',
+          'name': 'sfwe',
+        },
+      ],
+    }
   ]
 
   constructor() { }

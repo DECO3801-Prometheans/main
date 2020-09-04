@@ -68,5 +68,7 @@
            </div>
         </ion-row>
     </div>
-
+    <div class="farmers-section">
+        <app-recommend-farmer *ngFor="let farmer of farmers" [farmer]="farmer"></app-recommend-farmer>
+    </div>
 </ion-content>

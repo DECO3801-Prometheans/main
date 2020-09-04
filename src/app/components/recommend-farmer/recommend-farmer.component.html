@@ -1,0 +1,23 @@
+<ion-card>
+  <ion-item lines="none">
+    <ion-avatar slot="start">
+      <img [src]="farmer.avatar">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{farmer.name}}</h2>
+      <section>
+        <ion-button *ngFor="let label of farmer.labels" size="small">
+          {{label}}
+        </ion-button>
+      </section>
+    </ion-label>
+  </ion-item>
+  <ion-card-content>
+    <div>
+      <ion-col *ngFor="let product of farmer.products">
+        <img [src]="product.img">
+        <p>{{product.name}}</p>
+      </ion-col>
+    </div>
+  </ion-card-content>
+</ion-card>
