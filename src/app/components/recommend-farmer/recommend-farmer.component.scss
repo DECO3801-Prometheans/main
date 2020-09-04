@@ -13,7 +13,10 @@ ion-card {
             }
             section {
                 ion-button {
-                    --background: #41AC3C;
+                    --background:  #41AC3C;
+                    --background-activated:  #41AC3C;
+                    --background-hover:  #41AC3C;
+                    --box-shadow: 0;
                     ion-label {
                         color: white;
                         font-size: 1vw;
