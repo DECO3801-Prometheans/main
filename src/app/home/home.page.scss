@@ -34,11 +34,9 @@
         div {
             margin: auto;
             width: 90vw;
-            height: 20vh;
             display: flex;
             justify-content: space-around;
             ion-col {
-                --height:  35vw;
                 img {
                     margin: auto;
                     width: 28vw;
@@ -60,6 +58,51 @@
                     font-weight: bold;
                     margin: 0;
                     text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.bargain {
+    padding-bottom: 3vh;
+    .bargain-title{
+        h3 {
+            margin-left: 6vw;
+            font-weight: bold;
+            color: #41AC3C;
+        }
+    }
+    .bargain-row {
+        div {
+            margin: auto;
+            width: 90vw;
+            display: flex;
+            justify-content: space-around;
+            ion-col {
+                img {
+                    margin: auto;
+                    width: 28vw;
+                    height: 20vw;
+                    border-radius: 2vw;
+                }
+                p {
+                    width: 28vw;
+                    font-size: 3.2vw;
+                    color: #41AC3C;
+                    font-weight: bold;
+                    margin: 0;
+                    text-align: center;
+                }
+                .price{
+                    font-size: 4vw;
+                }
+                .discount{
+                    font-weight: 1;
+                    font-size: 2.5vw;
+                    ion-text{
+                        text-decoration:line-through;
+                    }
                 }
             }
         }

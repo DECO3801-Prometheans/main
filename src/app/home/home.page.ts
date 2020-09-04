@@ -32,6 +32,25 @@ export class HomePage implements OnInit {
     ],
   ]
 
+  public bargains = [
+    [
+      {img: '../../assets/imgs/best-seller/brocli.PNG', 
+        brief: 'hfie hofeah', price: 14.6, discount: 0.5}, 
+      {img: '../../assets/imgs/best-seller/carrot.PNG', 
+      brief: 'fdjwof fdowif j', price: 14.6, discount: 0.5}, 
+      {img: '../../assets/imgs/best-seller/corn.PNG', 
+      brief: '2e iwehfo iofwes', price: 14.6, discount: 0.5}, 
+    ],
+    [
+      {img: '../../assets/imgs/best-seller/onion.PNG', 
+        brief: 'fshdi ofsdihf', price: 14.6, discount: 0.5}, 
+      {img: '../../assets/imgs/best-seller/potato.PNG', 
+        brief: 'jido iofdsj f', price: 14.6, discount: 0.5}, 
+      {img: '../../assets/imgs/best-seller/spanish.PNG', 
+        brief: 'hufids oifsdj', price: 14.6, discount: 0.5}, 
+    ],
+  ]
+
   constructor() { }
 
   ngOnInit() {

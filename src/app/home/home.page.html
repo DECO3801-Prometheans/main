@@ -48,4 +48,25 @@
            </div>
         </ion-row>
     </div>
+    <div class="bargain">
+        <ion-row class="bargain-title">
+            <h3>Bargain</h3>
+        </ion-row>
+        <ion-row class="bargain-row" *ngFor="let row of bargains">
+           <div>
+            <ion-col *ngFor="let item of row">
+                <img [src]="item.img">
+                <p>{{item.brief}}</p>
+                <p class="price">
+                   AU {{item.price * (1 - item.discount) | currency}}
+                </p>
+                <p class="discount">
+                    <ion-text>AU {{item.price | currency}}</ion-text>
+                    {{item.discount * 100}}% off
+                </p>
+            </ion-col>
+           </div>
+        </ion-row>
+    </div>
+
 </ion-content>
