@@ -16,12 +16,27 @@ export class ResultsListPage implements OnInit {
   public products = [
     {
       img: '../assets/imgs/best-seller/carrot.PNG',
+      name: 'hiuw iweiu 2u9onev iweij',
+      price: 14.5,
+      numerial: 'kg',
+      farmer_name: 'kowoie',
+      location: 'location',
     },
     {
       img: '../assets/imgs/best-seller/onion.PNG',
+      name: 'oeogi iowfjoi iwjif oiefw',
+      price: 48.89,
+      numerial: 'kg',
+      farmer_name: 'kowoie',
+      location: 'location',
     },
     {
       img: '../assets/imgs/best-seller/tomato2.PNG',
+      name: 'hhofiw io3i iewjefi9 i34f',
+      price: 32.38,
+      numerial: 'kg',
+      farmer_name: 'kowoie',
+      location: 'location',
     }
   ];
 

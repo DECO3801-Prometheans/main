@@ -42,7 +42,22 @@ ion-content {
                 .product-info {
                     width: 55vw;
                     height: 30vw;
-                    
+                    h4 {
+                        margin: 1vw 0;
+                        color: #41AC3C;
+                        font-weight: bold;
+                    }
+                    p {
+                        margin: 0;
+                    }
+                    .price {
+                        color: #41AC3C;
+                        font-size: 2vw;
+                    }
+                    .brief {
+                        font-size: 1.8vw;
+                        color: gray;
+                    }
                 }
             }
         }
