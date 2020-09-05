@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { UtilsService } from '../../services/utils.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -17,7 +17,8 @@ export class HeaderComponent implements OnInit {
   ];
 
   constructor(
-    private utils: UtilsService
+    private utils: UtilsService,
+    private router: Router,
   ) { }
 
   ngOnInit() {}
@@ -57,7 +58,9 @@ export class HeaderComponent implements OnInit {
 
   searchItems(e) {
     if(e.code === 'Enter') {
-      console.log(this.keyWord, e.code);
+      //console.log(this.keyWord, e.code);
+      this.router.navigate(['/results-list', {keyWord: this.keyWord}]);
     }
   }
+
 }
