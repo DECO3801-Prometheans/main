@@ -9,6 +9,22 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class ResultsListPage implements OnInit {
   public keyWord ="";
 
+  public filterItems = [
+    'kjdfsi', 'fhwei', 'dfhwiu', 'hfiwuef', 'fweuwe'
+  ];
+
+  public products = [
+    {
+      img: '../assets/imgs/best-seller/carrot.PNG',
+    },
+    {
+      img: '../assets/imgs/best-seller/onion.PNG',
+    },
+    {
+      img: '../assets/imgs/best-seller/tomato2.PNG',
+    }
+  ];
+
   constructor(
     private route: ActivatedRoute,
   ) {
