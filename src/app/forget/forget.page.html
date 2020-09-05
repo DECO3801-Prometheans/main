@@ -1,0 +1,39 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div id= "logo-base">
+          <img id="logo" src="../../assets/imgs/logo - on cover .png">
+        </div>
+        <div>
+          <ion-item id="credential">
+            <img src="../../assets/imgs/email.png">
+            <ion-input name="email" type="email" placeholder="johndoe@mail.com"></ion-input>
+          </ion-item>
+        </div>
+        <div id="message">
+          <p>If this email is already registered, we will send an email to this email address to change the password.</p>
+        </div>
+        <div>
+          <ion-button color="" size="large" type="submit" [disabled]="form.invalid" expand="block">Login</ion-button>
+        </div>
+        <div>
+          <ion-row id="social">
+            <ion-col>
+              <ion-button color="white"><img src="../../assets/imgs/g+.png"></ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button color="white"><img src="../../assets/imgs/g+.png"></ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button color="white"><img src="../../assets/imgs/g+.png"></ion-button>
+            </ion-col>
+        </ion-row>
+        </div>
+        <div id = "signup">
+          <p>Do not have an account? SIGN UP</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
