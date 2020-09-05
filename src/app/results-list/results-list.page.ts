@@ -7,6 +7,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./results-list.page.scss'],
 })
 export class ResultsListPage implements OnInit {
+  public keyWord ="";
 
   constructor(
     private route: ActivatedRoute,
@@ -16,7 +17,8 @@ export class ResultsListPage implements OnInit {
 
   ngOnInit() {
     const keyWord = this.route.snapshot.paramMap.get('keyWord');
-    console.log(keyWord);
+    this.keyWord = keyWord;
+    console.log(this.keyWord);
   }
 
 }
