@@ -1,0 +1,45 @@
+#logo {
+    padding: 0% 40%;
+    max-height: 100px;
+    position: relative;
+}
+
+#logo-base {
+    background: #528053;
+    margin: -4% -4% 10%;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 9%;
+}
+
+#logo-base > h2 {
+    color: white;
+    padding-left: 19%;
+}
+
+#body {
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+}
+
+#code {
+    display: flex;
+    flex-direction: column;
+}
+
+#code > p {
+    font-size: 10px;
+}
+
+#credential > img {
+    width: 15%;
+    padding: 2%;
+}
+
+#login {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
