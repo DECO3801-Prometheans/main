@@ -16,8 +16,8 @@
           </ion-item>
         </div>
         <div>
-          <p id="forgot">Forgot your password?</p>
-          <ion-button color="" size="large" type="submit" [disabled]="form.invalid" expand="block">Login</ion-button>
+          <p id="forgot"><a [routerLink]="['/forget']">Forgot your password?</a></p>
+          <ion-button color="" size="large" type="submit" [routerLink]="['/home']" expand="block">Login</ion-button>
         </div>
         <div>
           <ion-row id="social">
@@ -33,7 +33,7 @@
         </ion-row>
         </div>
         <div id = "signup">
-          <p>Do not have an account? SIGN UP</p>
+          <p>Do not have an account? <a [routerLink]="['/register-user']">SIGN UP</a></p>
         </div>
       </ion-col>
     </ion-row>

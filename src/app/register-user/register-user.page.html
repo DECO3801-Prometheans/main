@@ -29,10 +29,10 @@
           </ion-item>
         </div>
         <div>
-          <ion-button color="" size="large" type="submit" [disabled]="form.invalid" expand="block">Submit</ion-button>
+          <ion-button color="" size="large" type="submit" [routerLink]="['/verification']" expand="block">Submit</ion-button>
         </div>
         <div id = "login">
-          <p>Already have an account? LOGIN</p>
+          <p>Already have an account? <a [routerLink]="['/login']">LOGIN</a></p>
         </div>
       </ion-col>
     </ion-row>

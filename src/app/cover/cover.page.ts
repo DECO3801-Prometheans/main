@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cover',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoverPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.router.navigate(['/front']); 
+      }, 5000);
   }
-
 }

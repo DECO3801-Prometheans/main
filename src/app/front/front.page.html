@@ -5,7 +5,7 @@
     <p>FRESHNESS AT YOUR DOOR STEP</p>
   </div>
   <div id="account">
-    <ion-button color="" size="large" type="submit" [disabled]="form.invalid" expand="block">Login</ion-button>
-    <ion-button color="" size="large" type="submit" [disabled]="form.invalid" expand="block">Register</ion-button>
+    <ion-button color="" size="large" type="submit" [routerLink]="['/login']" expand="block">Login</ion-button>
+    <ion-button color="" size="large" type="submit" [routerLink]="['/register-user']">Register</ion-button>
   </div>
 </ion-content>

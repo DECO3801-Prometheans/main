@@ -6,7 +6,7 @@ import { FrontPage } from './front.page';
 const routes: Routes = [
   {
     path: '',
-    component: FrontPage
+    component: FrontPage,
   }
 ];
 
