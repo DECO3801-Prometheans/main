@@ -7,16 +7,14 @@
         </div>
         <div>
           <ion-item id="credential">
-            <img src="../../assets/imgs/username.png">
-            <ion-input name="email" type="email" placeholder="Email/Username"></ion-input>
-          </ion-item>
-          <ion-item id="credential">
-            <img src="../../assets/imgs/password.png">
-            <ion-input name="password" type="password" placeholder="Password"></ion-input>
+            <img src="../../assets/imgs/email.png">
+            <ion-input name="email" type="email" placeholder="johndoe@mail.com"></ion-input>
           </ion-item>
         </div>
+        <div id="message">
+          <p>If this email is already registered, we will send an email to this email address to change the password.</p>
+        </div>
         <div>
-          <p id="forgot">Forgot your password?</p>
           <ion-button color="" size="large" type="submit" [disabled]="form.invalid" expand="block">Login</ion-button>
         </div>
         <div>

@@ -1,36 +1,30 @@
 #logo {
-    padding: 5%;
+    padding: 0% 40%;
     max-height: 100px;
     position: relative;
-    padding-left: 40%;
 }
 
 #logo-base {
-    background: #4e924e;
-    padding: 0%;
+    background: #528053;
     margin: -4% -4% 10%;
     align-content: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding-top: 9%;
 }
+
+#logo-base > h2 {
+    color: white;
+    padding-left: 19%;
+}
+
 #credential > img {
     width: 15%;
     padding: 2%;
 }
 
-#forgot {
-    color: black;
-    padding: 5% 5% 0% 5%;
-}
-
-#signup {
+#login {
     align-items: center;
     display: flex;
     flex-direction: column;
-}
-
-#social {
-    display: flex;
-    flex-direction: row;
-    padding: 10%;
 }
