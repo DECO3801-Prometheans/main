@@ -13,13 +13,9 @@ export class ProfilePage implements OnInit {
   constructor(
     private userService: UserService
     ) {
-      this.users = [localStorage.getItem('username')];
   }
 
   ngOnInit(){
-    this.userService.getUser().subscribe(data => {
-      console.log(data);
-    })
   }
  
   logout() {

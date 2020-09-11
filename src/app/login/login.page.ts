@@ -43,7 +43,7 @@ export class LoginPage implements OnInit {
     this.userService.login(this.userForm.value.email, this.userForm.value.password)
     .subscribe(done => {
         console.log(done);
-        this.router.navigate(['/home'])
+        this.router.navigate(['/tabs'])
       }, error => {
         this.presentAlert(error.error.message);
       });
