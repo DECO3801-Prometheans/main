@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { EnvService } from './env.service';
 import { Storage } from '@ionic/storage';
@@ -49,18 +48,9 @@ export class UserService {
   }
 
   logout() {
-    const headers = new HttpHeaders({
-      'Authorization': this.token["token_type"]+" "+this.token["access_token"]
-    });
-    return this.http.get(this.env.API_URL + '/logout', { headers: headers })
-    .pipe(
-      data => {
-        this.storage.remove("token");
-        this.isLoggedIn = false;
-        delete this.token;
-        return data;
-      }
-    )
+      this.storage.remove("token");
+      this.isLoggedIn = false;
+      delete this.token;
   }
 
   getToken() {

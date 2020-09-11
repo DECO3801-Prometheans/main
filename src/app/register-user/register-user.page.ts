@@ -63,7 +63,7 @@ export class RegisterUserPage implements OnInit {
         this.userForm.value.password1,
         ).subscribe(data => {
           console.log(data);
-          this.router.navigate(['/verification'])
+          this.router.navigate(['/verification']);
         }, error => {
           this.presentAlert(error.error.message);
         });

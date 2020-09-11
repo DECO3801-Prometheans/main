@@ -40,12 +40,18 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    this.userService.login(this.userForm.value.email, this.userForm.value.password)
-    .subscribe(done => {
-        console.log(done);
-        this.router.navigate(['/tabs'])
-      }, error => {
-        this.presentAlert(error.error.message);
-      });
+    if (this.userForm.value.email == ''){
+      this.presentAlert("Please enter an email"); 
+  } else if (this.userForm.value.password == '') {
+      this.presentAlert("Please enter password");    
+  } else {
+      this.userService.login(this.userForm.value.email, this.userForm.value.password)
+      .subscribe(done => {
+          console.log(done);
+          this.router.navigate(['/tabs/home'])
+        }, error => {
+          this.presentAlert(error.error.message);
+        });
+    }
   }
 }
