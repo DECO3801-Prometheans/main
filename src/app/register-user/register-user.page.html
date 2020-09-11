@@ -6,31 +6,33 @@
           <img id="logo" src="../../assets/imgs/logo - on cover .png">
           <h2>Create an Account</h2>
         </div>
+        <form [formGroup]="userForm" (ngSubmit)="register()">
         <div>
           <ion-item id="credential">
             <img src="../../assets/imgs/username.png">
-            <ion-input name="email" type="email" placeholder="First Name + Last Name"></ion-input>
+            <ion-input formControlName="name" type="email" placeholder="First Name + Last Name"></ion-input>
           </ion-item>
           <ion-item id="credential">
             <img src="../../assets/imgs/email.png">
-            <ion-input name="email" type="email" placeholder="Email"></ion-input>
+            <ion-input formControlName="email" type="email" placeholder="Email"></ion-input>
           </ion-item>
           <ion-item id="credential">
             <img src="../../assets/imgs/mobile.png">
-            <ion-input name="email" type="email" placeholder="Mobile"></ion-input>
+            <ion-input formControlName="mobile" type="email" placeholder="Mobile"></ion-input>
           </ion-item>
           <ion-item id="credential">
             <img src="../../assets/imgs/password.png">
-            <ion-input name="password" type="password" placeholder="Password"></ion-input>
+            <ion-input formControlName="password1" type="password" placeholder="Password"></ion-input>
           </ion-item>
           <ion-item id="credential">
             <img src="../../assets/imgs/password.png">
-            <ion-input name="password" type="password" placeholder="Confirm Password"></ion-input>
+            <ion-input formControlName="password2" type="password" placeholder="Confirm Password"></ion-input>
           </ion-item>
         </div>
         <div>
-          <ion-button color="" size="large" type="submit" [routerLink]="['/verification']" expand="block">Submit</ion-button>
+          <ion-button color="" size="large" type="submit" expand="block">Submit</ion-button>
         </div>
+        </form>
         <div id = "login">
           <p>Already have an account? <a [routerLink]="['/login']">LOGIN</a></p>
         </div>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormBuilder } from "@angular/forms";
 import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +17,9 @@ export class LoginPage implements OnInit {
   constructor(
     public fb: FormBuilder,
     public http: HttpClient,
-    private userService: UserService
+    private userService: UserService,
+    private router: Router,
+    public alertController: AlertController
     ) { 
       this.userForm = this.fb.group({
         email: [''],
@@ -25,13 +29,23 @@ export class LoginPage implements OnInit {
 
   ngOnInit(){}
 
+  async presentAlert(message: string) {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      message: message,
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
+
   login() {
     this.userService.login(this.userForm.value.email, this.userForm.value.password)
     .subscribe(done => {
         console.log(done);
+        this.router.navigate(['/home'])
       }, error => {
-        console.log(error.error.message);
-        window.confirm(error.error.message);
+        this.presentAlert(error.error.message);
       });
   }
 }

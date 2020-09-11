@@ -5,20 +5,22 @@
         <div id= "logo-base">
           <img id="logo" src="../../assets/imgs/logo - on cover .png">
         </div>
-        <div>
-          <ion-item id="credential">
-            <img src="../../assets/imgs/username.png">
-            <ion-input name="email" type="email" placeholder="Email/Username"></ion-input>
-          </ion-item>
-          <ion-item id="credential">
-            <img src="../../assets/imgs/password.png">
-            <ion-input name="password" type="password" placeholder="Password"></ion-input>
-          </ion-item>
-        </div>
-        <div>
-          <p id="forgot"><a [routerLink]="['/forget']">Forgot your password?</a></p>
-          <ion-button color="" size="large" type="submit" [routerLink]="['/home']" expand="block">Login</ion-button>
-        </div>
+        <form [formGroup]="userForm" (ngSubmit)="login()">
+          <div>
+            <ion-item id="credential">
+              <img src="../../assets/imgs/username.png">
+              <ion-input formControlName="email" type="email" placeholder="Email/Username"></ion-input>
+            </ion-item>
+            <ion-item id="credential">
+              <img src="../../assets/imgs/password.png">
+              <ion-input formControlName="password" type="password" placeholder="Password"></ion-input>
+            </ion-item>
+          </div>
+          <div>
+            <p id="forgot"><a [routerLink]="['/forget']">Forgot your password?</a></p>
+            <ion-button color="" size="large" type="submit" expand="block">Login</ion-button>
+          </div>
+        </form>
         <div>
           <ion-row id="social">
             <ion-col>

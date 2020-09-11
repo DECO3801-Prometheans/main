@@ -6,45 +6,47 @@
           <img id="logo" src="../../assets/imgs/logo - on cover .png">
           <h2>Create an Account</h2>
         </div>
-        <div>
-          <ion-item id="credential">
-            <img src="../../assets/imgs/username.png">
-            <ion-input name="email" type="email" placeholder="First Name + Last Name"></ion-input>
-          </ion-item>
-          <ion-item id="credential">
-            <img src="../../assets/imgs/email.png">
-            <ion-input name="email" type="email" placeholder="Email"></ion-input>
-          </ion-item>
-          <ion-item id="credential">
-            <img src="../../assets/imgs/mobile.png">
-            <ion-input name="email" type="email" placeholder="Mobile"></ion-input>
-          </ion-item>
-          <ion-item id="credential">
-            <img src="../../assets/imgs/farm_name.png">
-            <ion-input name="email" type="email" placeholder="Farm Name"></ion-input>
-          </ion-item>
-          <ion-item id="credential">
-            <img src="../../assets/imgs/Lisence.png">
-            <ion-input name="email" type="email" placeholder="Lisence no."></ion-input>
-          </ion-item>
-          <ion-item id="credential">
-            <img src="../../assets/imgs/Expire_date.png">
-            <ion-input name="email" type="email" placeholder="Expire date"></ion-input>
-          </ion-item>
-          <ion-item id="credential">
-            <img src="../../assets/imgs/password.png">
-            <ion-input name="password" type="password" placeholder="Password"></ion-input>
-          </ion-item>
-          <ion-item id="credential">
-            <img src="../../assets/imgs/password.png">
-            <ion-input name="password" type="password" placeholder="Confirm Password"></ion-input>
-          </ion-item>
-        </div>
-        <div>
-          <ion-button color="" size="large" type="submit" [disabled]="form.invalid" expand="block">Submit</ion-button>
-        </div>
+        <form [formGroup]="userForm" (ngSubmit)="register()">
+          <div>
+            <ion-item id="credential">
+              <img src="../../assets/imgs/username.png">
+              <ion-input formControlName="name" type="email" placeholder="First Name + Last Name"></ion-input>
+            </ion-item>
+            <ion-item id="credential">
+              <img src="../../assets/imgs/email.png">
+              <ion-input formControlName="email" type="email" placeholder="Email"></ion-input>
+            </ion-item>
+            <ion-item id="credential">
+              <img src="../../assets/imgs/mobile.png">
+              <ion-input formControlName="mobile" type="email" placeholder="Mobile"></ion-input>
+            </ion-item>
+            <ion-item id="credential">
+              <img src="../../assets/imgs/farm_name.png">
+              <ion-input name="email" type="email" placeholder="Farm Name"></ion-input>
+            </ion-item>
+            <ion-item id="credential">
+              <img src="../../assets/imgs/Lisence.png">
+              <ion-input name="email" type="email" placeholder="License no."></ion-input>
+            </ion-item>
+            <ion-item id="credential">
+              <img src="../../assets/imgs/Expire_date.png">
+              <ion-input name="email" type="email" placeholder="Expire date"></ion-input>
+            </ion-item>
+            <ion-item id="credential">
+              <img src="../../assets/imgs/password.png">
+              <ion-input formControlName="password1" type="password" placeholder="Password"></ion-input>
+            </ion-item>
+            <ion-item id="credential">
+              <img src="../../assets/imgs/password.png">
+              <ion-input formControlName="password2" type="password" placeholder="Confirm Password"></ion-input>
+            </ion-item>
+          </div>
+          <div>
+            <ion-button color="" size="large" type="submit" [disabled]="" expand="block">Submit</ion-button>
+          </div>
+        </form>
         <div id = "login">
-          <p>Already have an account? LOGIN</p>
+          <p>Already have an account? <a [routerLink]="['/login']">LOGIN</a></p>
         </div>
       </ion-col>
     </ion-row>
