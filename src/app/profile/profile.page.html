@@ -1,19 +1,101 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Profile
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Welcome {{name}}</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Welcome to your profile"></app-explore-container>
-
-  <ion-button (click)="logout()">Logout</ion-button>
+<ion-content>
+  <div id="credential">
+    <ion-row>
+      <ion-col>
+        <div>
+        <img src="../../assets/imgs/username.png">
+        </div>
+      </ion-col>
+      <ion-col>
+        <p>John Doe</p>
+        <p>Account Number:</p>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div id="menu">
+    <ion-row>
+      <ion-col>
+        <ion-button color="white"><img src="../../assets/imgs/my-info.png"></ion-button>
+        <p>My Info</p>
+      </ion-col>
+      <ion-col>
+        <ion-button color="white"><img src="../../assets/imgs/wishlist.png"></ion-button>
+        <p>Wish List</p>
+      </ion-col>
+      <ion-col>
+        <ion-button color="white"><img src="../../assets/imgs/history.png"></ion-button>
+        <p>History</p>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div id="orders">
+    <ion-row>
+      <ion-col>
+        <h4>My Orders</h4>
+      </ion-col>
+      <ion-col>
+        <p>All Orders --></p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="white"><img src="../../assets/imgs/Order-status.png"></ion-button>
+        <p>Order Status</p>
+      </ion-col>
+      <ion-col>
+        <ion-button color="white"><img src="../../assets/imgs/after-sale.png"></ion-button>
+        <p>After-sales</p>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div id="settings">
+    <ion-row>
+      <h3>Account Setting</h3>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>Payments</p>
+      </ion-col>
+      <ion-col>
+        <p>></p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>Switch Account</p>
+      </ion-col>
+      <ion-col>
+        <p>></p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>Manage Delivery Address</p>
+      </ion-col>
+      <ion-col>
+        <p>></p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>Manage Shopping Notifications</p>
+      </ion-col>
+      <ion-col>
+        <p>></p>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div id = "help">
+    <h3>Help and Support</h3>
+    <ion-row>
+      <ion-col>
+        <ion-button color="white"><img src="../../assets/imgs/call_us.png"></ion-button>
+        <p>Call Us</p>
+      </ion-col>
+      <ion-col>
+        <ion-button color="white"><img src="../../assets/imgs/chat.png"></ion-button>
+        <p>Chat Online</p>
+      </ion-col>
+    </ion-row>
+  </div>
 </ion-content>
