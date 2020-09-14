@@ -1,0 +1,61 @@
+#credential {
+    background: #4e924e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    ion-col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div {
+        background: white;
+        border-radius: 100%;
+        padding: 15%;
+    }
+    img {
+        width: 7vw;
+        height: 7vw;
+    }
+}
+
+#menu {
+    background: #4e924e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    img {
+        width: 7vw;
+        height: 7vw;
+    }
+}
+
+#orders {
+    background: #dbdbdb;
+    border-radius: 25px;
+    margin: 5%;
+    img {
+        width: 15vw;
+        height: 15vw;
+    }
+}
+
+#settings {
+    background: #dbdbdb;
+    border-radius: 25px;
+    margin: 5%;
+    p {
+        margin: auto;
+    }
+
+}
+
+#help {
+    background: #dbdbdb;
+    border-radius: 25px;
+    margin: 5%;
+    img {
+        width: 7vw;
+        height: 7vw;
+    }
+}
