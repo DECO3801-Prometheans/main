@@ -1,0 +1,21 @@
+#add-photos, #title, #price, #delivery, #product-description {
+    margin: 2%;
+    color: grey;
+    border-radius: 8px;
+}
+
+#product-description, #add-photos {
+    height: 150px;
+    text-align: center;
+}
+
+#box {
+    display: flex;
+    flex-direction: column;
+}
+
+#box > ion-button {
+    width: fit-content;
+    position: relative;
+    right: -77%
+}
