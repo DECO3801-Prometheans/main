@@ -2,21 +2,25 @@
     background: #4e924e;
     color: white;
     display: flex;
-    justify-content: center;
-    ion-col {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    div {
-        background: white;
-        border-radius: 100%;
-        padding: 15%;
-    }
-    img {
-        width: 7vw;
-        height: 7vw;
-    }
+    flex-direction: column;
+}
+
+#cred {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 0%;
+}
+
+img {
+    height: 60%;
+    margin-top: 7%;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #menu {
@@ -24,38 +28,85 @@
     color: white;
     display: flex;
     justify-content: center;
-    img {
-        width: 7vw;
-        height: 7vw;
-    }
+    
 }
+
+#my-info, #wish-list, #history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#my-info, #wish-list, #history >  p {
+    text-align: center;
+}
+
 
 #orders {
     background: #dbdbdb;
     border-radius: 25px;
     margin: 5%;
-    img {
-        width: 15vw;
-        height: 15vw;
-    }
+}
+
+#order-head {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#order-head > ion-col > h4 {
+    text-align: left;
+}
+
+#order-head > ion-col > p {
+    text-align: end;
+}
+
+#order-status, #after-sales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
 }
 
 #settings {
     background: #dbdbdb;
     border-radius: 25px;
     margin: 5%;
-    p {
-        margin: auto;
-    }
+}
 
+#settings-heading {
+    justify-content: left;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+}
+
+#payment, #switch, #delivery, #shopping {
+    display: flex;
+    flex-direction: row;
+}
+
+#arrow {
+    text-align: end;
 }
 
 #help {
     background: #dbdbdb;
     border-radius: 25px;
     margin: 5%;
-    img {
-        width: 7vw;
-        height: 7vw;
-    }
+    display: flex;
+    flex-direction: column;
+}
+
+#help > h3 {
+    justify-content: left;
+}
+
+#call, #chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

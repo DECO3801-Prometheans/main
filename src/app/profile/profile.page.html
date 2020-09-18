@@ -1,35 +1,37 @@
 <ion-content>
   <div id="credential">
     <ion-row>
-      <ion-col>
-        <div>
-        <img src="../../assets/imgs/username.png">
+      <ion-col id="cred">
+          <img src="../../assets/imgs/username.png">
+        <div id="info">
+          <div>
+            <p>John Doe</p>
+          </div>
+          <div>
+            <p>Account Number:</p>
+          </div>
         </div>
-      </ion-col>
-      <ion-col>
-        <p>John Doe</p>
-        <p>Account Number:</p>
       </ion-col>
     </ion-row>
   </div>
+
   <div id="menu">
-    <ion-row>
-      <ion-col>
+      <ion-col id="my-info">
         <ion-button color="white"><img src="../../assets/imgs/my-info.png"></ion-button>
         <p>My Info</p>
       </ion-col>
-      <ion-col>
+      <ion-col id="wish-list">
         <ion-button color="white"><img src="../../assets/imgs/wishlist.png"></ion-button>
         <p>Wish List</p>
       </ion-col>
-      <ion-col>
+      <ion-col id="history">
         <ion-button color="white"><img src="../../assets/imgs/history.png"></ion-button>
         <p>History</p>
       </ion-col>
-    </ion-row>
   </div>
+
   <div id="orders">
-    <ion-row>
+    <ion-row id="order-head">
       <ion-col>
         <h4>My Orders</h4>
       </ion-col>
@@ -37,62 +39,66 @@
         <p>All Orders --></p>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col>
+    <ion-row >
+      <ion-col id="order-status">
         <ion-button color="white"><img src="../../assets/imgs/Order-status.png"></ion-button>
         <p>Order Status</p>
       </ion-col>
-      <ion-col>
+      <ion-col id="after-sales">
         <ion-button color="white"><img src="../../assets/imgs/after-sale.png"></ion-button>
         <p>After-sales</p>
       </ion-col>
     </ion-row>
   </div>
+
   <div id="settings">
     <ion-row>
-      <h3>Account Setting</h3>
+      <h3 id="settings-heading">Account Setting</h3>
     </ion-row>
-    <ion-row>
-      <ion-col>
-        <p>Payments</p>
-      </ion-col>
-      <ion-col>
-        <p>></p>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <p>Switch Account</p>
-      </ion-col>
-      <ion-col>
-        <p>></p>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <p>Manage Delivery Address</p>
-      </ion-col>
-      <ion-col>
-        <p>></p>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <p>Manage Shopping Notifications</p>
-      </ion-col>
-      <ion-col>
-        <p>></p>
-      </ion-col>
+    <ion-row id="options">
+      <div id="payment">
+        <ion-col>
+          <p>Payments</p>
+        </ion-col>
+        <ion-col>
+          <p id="arrow">></p>
+        </ion-col>
+      </div>
+      <div id="switch">
+        <ion-col>
+          <p>Switch Account</p>
+        </ion-col>
+        <ion-col>
+          <p id="arrow">></p>
+        </ion-col>
+      </div>
+      <div id="delivery">
+        <ion-col>
+          <p>Manage Delivery Address</p>
+        </ion-col>
+        <ion-col>
+          <p id="arrow">></p>
+        </ion-col>
+      </div>
+      <div id="shopping">
+        <ion-col>
+          <p>Manage Shopping Notifications</p>
+        </ion-col>
+        <ion-col>
+          <p id="arrow">></p>
+        </ion-col>
+      </div>
     </ion-row>
   </div>
+  
   <div id = "help">
     <h3>Help and Support</h3>
     <ion-row>
-      <ion-col>
+      <ion-col id="call">
         <ion-button color="white"><img src="../../assets/imgs/call_us.png"></ion-button>
         <p>Call Us</p>
       </ion-col>
-      <ion-col>
+      <ion-col id="chat">
         <ion-button color="white"><img src="../../assets/imgs/chat.png"></ion-button>
         <p>Chat Online</p>
       </ion-col>
