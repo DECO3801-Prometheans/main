@@ -11,6 +11,7 @@ export class UserService {
   
   isLoggedIn = false;
   token:any;
+  id = "";
 
   constructor(
     private http: HttpClient,
@@ -70,8 +71,17 @@ export class UserService {
     );
   }
 
-  getUser() {
-    console.log(this.token['_id']);
-    return this.http.get(this.env.API_URL + '/users/' + this.token['_id']);
+  getUser(id = this.token['_id']) {
+    return this.http.get(this.env.API_URL + '/users/' + id);
+  }
+
+  verifyEmail(email: String, code: String) {
+      return this.http.post(this.env.API_URL + '/users/activateEmail',
+      {email: email, verify_code: code}
+    );
+  }
+
+  sendEmail(email : String, id){
+    return this.http.get(this.env.API_URL + '/users/sendEmail/' + id);
   }
 }

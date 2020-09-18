@@ -22,6 +22,7 @@ export class ProfilePage implements OnInit {
       this.name = data["first_name"];
     })
   }
+  
  
   logout() {
       this.userService.logout();

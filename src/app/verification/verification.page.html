@@ -6,13 +6,16 @@
           <img id="logo" src="../../assets/imgs/logo - on cover .png">
           <h2>Create an Account</h2>
         </div>
+        <form [formGroup]="userForm" (ngSubmit)="verifyEmail()">
         <div id = "body">
+          
           <ion-item id="credential">
             <p>The email/message has been sent to xxx for verification</p>
           </ion-item>
           <ion-item id="credential">
             <div id = "code">
-              <ion-input name="email" type="email" placeholder="Verification Code"></ion-input>
+              
+              <ion-input formControlName="code" type="email" placeholder="Verification Code"></ion-input>
               <p>Resend the code</p>
             </div>
           </ion-item>
@@ -20,6 +23,7 @@
         <div>
           <ion-button color="" size="large" type="submit" [routerLink]="['/tabs/home']" expand="block">Confirm</ion-button>
         </div>
+      </form>
       </ion-col>
     </ion-row>
   </ion-grid>
