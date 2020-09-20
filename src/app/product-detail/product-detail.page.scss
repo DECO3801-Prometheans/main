@@ -1,0 +1,48 @@
+.product-name {
+    h3 {
+        margin-left: 6vw;
+        font-weight: bold;
+    }
+}
+.product-image {
+    padding: 5vw;
+    img {
+        margin: auto;
+        width: 56vw;
+        height:40vw;
+        border-radius: 2vw;
+    }
+}
+.product-price {
+    padding-bottom: 6vw;
+    div {
+        margin-left: 6vw;
+        background-color: #41AC3C;
+        padding: 0vw 4vw 0vw 1vw;
+        border: 1;
+        border-radius: 0.5vw;
+        h2 {
+            font-weight: bold;
+            padding: 0;
+        }
+    }
+}
+.product-description {
+    margin-bottom: 6vw;
+    div {
+        width: 70vw;
+        margin: auto;
+        text-align: center;
+    }
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    ion-button {
+        --background:  #41AC3C;
+        --background-activated:  #41AC3C;
+        --background-hover:  #41AC3C;
+        --box-shadow: 0;  
+        margin: 3vw;
+    }
+}

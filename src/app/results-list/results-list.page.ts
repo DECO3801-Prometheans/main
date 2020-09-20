@@ -20,25 +20,31 @@ export class ResultsListPage implements OnInit {
       img: '../assets/imgs/best-seller/carrot.PNG',
       name: 'hiuw iweiu 2u9onev iweij',
       price: 14.5,
+      delivery: 1.7,
       numerial: 'kg',
       farmer_name: 'kowoie',
       location: 'location',
+      description: 'hgifusiu uifwhuif ifuwhuif whfui ufwhie uwfehfiwu iuwhfiuew',
     },
     {
       img: '../assets/imgs/best-seller/onion.PNG',
       name: 'oeogi iowfjoi iwjif oiefw',
       price: 48.89,
+      delivery: 1.7,
       numerial: 'kg',
       farmer_name: 'kowoie',
       location: 'location',
+      description: 'hgifusiu uifwhuif ifuwhuif whfui ufwhie uwfehfiwu iuwhfiuew',
     },
     {
       img: '../assets/imgs/best-seller/tomato2.PNG',
       name: 'hhofiw io3i iewjefi9 i34f',
       price: 32.38,
+      delivery: 1.7,
       numerial: 'kg',
       farmer_name: 'kowoie',
       location: 'location',
+      description: 'hgifusiu uifwhuif ifuwhuif whfui ufwhie uwfehfiwu iuwhfiuew',
     }
   ];
 

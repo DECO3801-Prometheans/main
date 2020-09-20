@@ -13,11 +13,11 @@ export class ProductDetailPage implements OnInit {
   constructor(
     public _utils: UtilsService,
   ) {
-    
+
   }
 
   ngOnInit() {
-    console.log(this.product)
+    
   }
 
   closeModal() {
