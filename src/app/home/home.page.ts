@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilsService } from '../services/utils.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+
+  public userInfo: any;
 
   public slides = [
     '../../assets/imgs/types-of-fuit-hero-e1559313183734.jpg',
@@ -111,9 +115,33 @@ export class HomePage implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(
+    public _utils: UtilsService,
+    public _user: UserService,
+  ) {
+    this.userInfo = {
+      type: 'customer'
+    };
+  }
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this._utils.showLoading({
+      message: 'Loading...',
+      duration: 5000,
+    });
+    let user = await this._user.getUser().toPromise();
+    this._utils.hideLoading();
+    if(!user) {
+      this._utils.presentAlert({
+        header: 'Alert',
+        message: 'Couldn\'t load data!',
+        buttons: ['OK']
+      });
+    } else {
+      this._utils.setStorage('userInfo', {value: user});
+      this.userInfo = user;
+    }
+    this.userInfo.type = 'farmer';
   }
 
 }

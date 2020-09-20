@@ -49,7 +49,11 @@ const routes: Routes = [
   {
     path: 'upload-products',
     loadChildren: () => import('./upload-products/upload-products.module').then( m => m.UploadProductsPageModule)
+  },  {
+    path: 'product-detail',
+    loadChildren: () => import('./product-detail/product-detail.module').then( m => m.ProductDetailPageModule)
   },
+
 
 ];
 @NgModule({

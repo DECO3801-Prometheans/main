@@ -38,7 +38,7 @@ export class UserService {
         this.token = token;
         this.isLoggedIn = true;
         return token;
-      }),
+      })
     );
   }
 

@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<ion-content>
+<ion-content *ngIf="userInfo.type==='customer'">
     <ion-slides>
         <ion-slide *ngFor="let item of slides">
             <ion-row size="12">
@@ -71,4 +71,16 @@
     <div class="farmers-section">
         <app-recommend-farmer *ngFor="let farmer of farmers" [farmer]="farmer"></app-recommend-farmer>
     </div>
+</ion-content>
+
+<ion-content *ngIf="userInfo.type==='farmer'">
+    <ion-slides>
+        <ion-slide *ngFor="let item of slides">
+            <ion-row size="12">
+                <ion-col class="slide-col">
+                  <img [src]="item">
+                </ion-col>
+            </ion-row>
+        </ion-slide>
+    </ion-slides>
 </ion-content>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { UtilsService } from '../services/utils.service';
+import { ProductDetailPage } from '../product-detail/product-detail.page';
 
 @Component({
   selector: 'app-results-list',
@@ -42,6 +44,7 @@ export class ResultsListPage implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private _utils: UtilsService,
   ) {
 
    }
@@ -50,6 +53,12 @@ export class ResultsListPage implements OnInit {
     const keyWord = this.route.snapshot.paramMap.get('keyWord');
     this.keyWord = keyWord;
     console.log(this.keyWord);
+  }
+
+  async showProductDetail(product) {
+    await this._utils.showModal(ProductDetailPage, {
+      'product': product
+    });
   }
 
 }
