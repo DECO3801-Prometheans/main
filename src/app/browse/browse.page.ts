@@ -11,38 +11,11 @@ export class BrowsePage implements OnInit {
 
   public keyWord ="";
 
-  public _products = {
-  }
-
   public filterItems = [
     'kjdfsi', 'fhwei', 'dfhwiu', 'hfiwuef', 'fweuwe'
   ];
 
   public products = [
-    {
-      img: '../assets/imgs/best-seller/carrot.PNG',
-      name: 'hiuw iweiu 2u9onev iweij',
-      price: 14.5,
-      numerial: 'kg',
-      farmer_name: 'kowoie',
-      location: 'location',
-    },
-    {
-      img: '../assets/imgs/best-seller/onion.PNG',
-      name: 'oeogi iowfjoi iwjif oiefw',
-      price: 48.89,
-      numerial: 'kg',
-      farmer_name: 'kowoie',
-      location: 'location',
-    },
-    {
-      img: '../assets/imgs/best-seller/tomato2.PNG',
-      name: 'hhofiw io3i iewjefi9 i34f',
-      price: 32.38,
-      numerial: 'kg',
-      farmer_name: 'kowoie',
-      location: 'location',
-    }
   ];
 
   constructor(
@@ -60,6 +33,6 @@ export class BrowsePage implements OnInit {
   async getProducts() {
     const res = await this.productService.getCategories(this.keyWord).toPromise();
     console.log(res);
-    this._products = res;
+    this.products = res;
   }
 }
