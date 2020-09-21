@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Router } from '@angular/router';
+import { UtilsService } from '../services/utils.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +11,19 @@ import { Router } from '@angular/router';
 })
 export class HomePage implements OnInit {
 
+  public userInfo: any;
+
   public slides = [
     '../../assets/imgs/types-of-fuit-hero-e1559313183734.jpg',
     '../../assets/imgs/types-of-fuit-hero-e1559313183734.jpg',
     '../../assets/imgs/types-of-fuit-hero-e1559313183734.jpg'
   ];
+
+  public _slides = [
+    '../../assets/imgs/farm ad2.JPG',
+    '../../assets/imgs/farm ad3.JPG',
+    '../../assets/imgs/farm ad4.JPG'
+  ]
 
   public best_sellers = [
     [
@@ -114,9 +125,32 @@ export class HomePage implements OnInit {
 
   constructor(
     private router: Router,
-  ) { }
+    public _utils: UtilsService,
+    public _user: UserService,
+  ) {
+    this.userInfo = {
+      type: 'customer'
+    };
+  }
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this._utils.showLoading({
+      message: 'Loading...',
+      duration: 5000,
+    });
+    let user = await this._user.getUser().toPromise();
+    this._utils.hideLoading();
+    if(!user) {
+      this._utils.presentAlert({
+        header: 'Alert',
+        message: 'Couldn\'t load data!',
+        buttons: ['OK']
+      });
+    } else {
+      this._utils.setStorage('userInfo', {value: user});
+      this.userInfo = user;
+    }
+    this.userInfo.type = 'farmer';
   }
 
   browseCategory(c) {

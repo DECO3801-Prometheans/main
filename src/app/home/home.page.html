@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<ion-content>
+<ion-content *ngIf="userInfo.type==='customer'">
     <ion-slides>
         <ion-slide *ngFor="let item of slides">
             <ion-row size="12">
@@ -70,5 +70,40 @@
     </div>
     <div class="farmers-section">
         <app-recommend-farmer *ngFor="let farmer of farmers" [farmer]="farmer"></app-recommend-farmer>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="userInfo.type==='farmer'">
+    <ion-slides>
+        <ion-slide *ngFor="let item of _slides">
+            <ion-row size="12">
+                <ion-col class="slide-col">
+                  <img [src]="item">
+                </ion-col>
+            </ion-row>
+        </ion-slide>
+    </ion-slides>
+    <ion-row>
+        <ion-col class="farmer-section-first">
+            <img src="../../assets/imgs/message.JPG">
+            <ion-row><div>Message</div></ion-row>
+        </ion-col>
+        <ion-col class="farmer-section-first">
+            <img src="../../assets/imgs/order2.JPG">
+            <ion-row><div>My Order</div></ion-row>
+        </ion-col>
+        <ion-col class="farmer-section-first">
+            <img src="../../assets/imgs/product.JPG">
+            <ion-row><div>My Product</div></ion-row>
+        </ion-col>
+        <ion-col class="farmer-section-first">
+            <img src="../../assets/imgs/community.JPG">
+            <ion-row><div>Community</div></ion-row>
+        </ion-col>
+    </ion-row>
+    <div class="farmer-div">
+        <ion-row>
+            <ion-button>Port an product</ion-button>
+        </ion-row>
     </div>
 </ion-content>

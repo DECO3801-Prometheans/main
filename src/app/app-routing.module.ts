@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
+    path: 'results-list',
+    loadChildren: () => import('./results-list/results-list.module').then( m => m.ResultsListPageModule)
+  },
+  {
     path: 'forget',
     loadChildren: () => import('./forget/forget.module').then( m => m.ForgetPageModule)
   },
@@ -45,6 +49,10 @@ const routes: Routes = [
   {
     path: 'upload-products',
     loadChildren: () => import('./upload-products/upload-products.module').then( m => m.UploadProductsPageModule)
+  },
+  {
+    path: 'product-detail',
+    loadChildren: () => import('./product-detail/product-detail.module').then( m => m.ProductDetailPageModule)
   },
 
 

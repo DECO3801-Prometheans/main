@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Product Detail</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-row class="product-name">
+  <h3>{{product.name || ''}}</h3>
+</ion-row>
+<ion-row class="product-image">
+  <img [src]="product.img">
+</ion-row>
+<ion-row class="product-price">
+  <div>
+    <h2>Price: {{product.price || price}}/{{product.numerial}}</h2>
+  </div>
+</ion-row>
+<ion-row class="product-price">
+  <div>
+    <h2>Delivery: {{product.delivery || price}}</h2>
+  </div>
+</ion-row>
+<ion-row class="product-description">
+  <div>
+    <h3>Description</h3>
+    <p>{{product.description}}</p>
+  </div>
+</ion-row>
+<ion-row class="buttons">
+  <ion-button>Buy now</ion-button>
+  <ion-button>Add to Cart</ion-button>
+</ion-row>
+</ion-content>

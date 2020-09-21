@@ -3,8 +3,9 @@
 }
 
 .section {
-    width: 18vw;
+    width: 23vw;
     height: 23vw;
+    text-align: center;
     img {
         width: 17vw;
         height: 17vw;
@@ -113,4 +114,39 @@
     background: #99ffbc;
     padding-top: 3vh;
     padding-bottom: 3vh;
+}
+
+.farmer-section-first {
+    width: 18vw;
+    height: 23vw;
+    text-align: center;
+    img {
+        width: 17vw;
+        height: 17vw;
+    }
+    ion-row {
+        div {
+            margin: auto;
+        }
+        font-size: 2.5vw;
+        color: #AFAFAF;
+        font-weight: bold;
+    }
+    margin-bottom: 4vh;
+}
+
+.farmer-div {
+    background: #99ffbc;
+    height: 100vw;
+    ion-row {
+        display: flex;
+        justify-content: center;
+        ion-button {
+            --background:  #41AC3C;
+            --background-activated:  #41AC3C;
+            --background-hover:  #41AC3C;
+            --box-shadow: 0;  
+            margin-top: 30vw;
+        }
+    }
 }
