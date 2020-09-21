@@ -17,6 +17,12 @@ export class HomePage implements OnInit {
     '../../assets/imgs/types-of-fuit-hero-e1559313183734.jpg'
   ];
 
+  public _slides = [
+    '../../assets/imgs/farm ad2.JPG',
+    '../../assets/imgs/farm ad3.JPG',
+    '../../assets/imgs/farm ad4.JPG'
+  ]
+
   public best_sellers = [
     [
       {img: '../../assets/imgs/best-seller/brocli.PNG', 
