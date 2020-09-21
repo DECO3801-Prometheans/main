@@ -18,12 +18,6 @@ export class ProductService {
     }); 
   }
 
-  addProduct(name: String, type: String, price: String, numeraire: String, farmer_id: String, img: String, description: String) {
-    return this.http.post(this.env.API_URL + '/products',
-      {name: name, type: type, price: price, numeraire: numeraire, farmer_id: farmer_id, img: img, description: description}
-    )
-  }
-
   getCategories(category: String) {
     return this.http.get(this.env.API_URL + '/types/category/' + category);
   }
