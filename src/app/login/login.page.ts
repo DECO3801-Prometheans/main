@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormBuilder } from "@angular/forms";
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
@@ -16,7 +15,6 @@ export class LoginPage implements OnInit {
 
   constructor(
     public fb: FormBuilder,
-    public http: HttpClient,
     private userService: UserService,
     private router: Router,
     public alertController: AlertController
