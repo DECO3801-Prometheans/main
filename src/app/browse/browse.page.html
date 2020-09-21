@@ -1,0 +1,30 @@
+<app-header></app-header>
+<ion-toolbar>
+    <ion-item lines="full">
+        <ion-label>Filter</ion-label>
+        <ion-select interface="popover">
+            <ion-select-option *ngFor="let item of filterItems" [value]="item">
+                {{item}}
+            </ion-select-option>
+        </ion-select>
+    </ion-item>
+</ion-toolbar>
+<ion-content>
+    <div class="main-content">
+        <ion-row *ngFor="let product of products" class="product-cards">
+            <div>
+                <div class="product-img">
+                    <img [src]="product.img">
+                </div>
+                <div class="product-info">
+                    <ion-col>
+                        <h4>{{product.name}}</h4>
+                        <p>hdjfkshdfowei oifwejofwej</p>
+                        <p class="price">AU {{product.price | currency}}/{{product.numerial}}</p>
+                        <p class="brief">{{product.farmer_name}} {{product.location}}</p>
+                    </ion-col>
+                </div>
+            </div>
+        </ion-row>
+    </div>
+</ion-content>

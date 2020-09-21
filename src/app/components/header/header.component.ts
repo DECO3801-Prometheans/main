@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { UtilsService } from '../../services/utils.service';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -59,7 +60,7 @@ export class HeaderComponent implements OnInit {
   searchItems(e) {
     if(e.code === 'Enter') {
       //console.log(this.keyWord, e.code);
-      this.router.navigate(['/results-list', {keyWord: this.keyWord}]);
+      this.router.navigate(['/tabs/results-list', {keyWord: this.keyWord}]);
     }
   }
 
