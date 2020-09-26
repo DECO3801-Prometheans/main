@@ -1,11 +1,12 @@
 <ion-content>
-  <div id= "logo-base">
-    <img id="logo" src="../../assets/imgs/logo - on cover .png">
-    <h1>Farm Shop</h1>
-    <p>FRESHNESS AT YOUR DOOR STEP</p>
-  </div>
-  <div id="account">
-    <ion-button id="customer" size="large" type="submit" [routerLink]="['/register-user']" expand="block">Register as <br> customer</ion-button>
-    <ion-button id="farmer" colour="white" size="large" type="submit" [routerLink]="['/register-farmer']">Register as <br> farm owner</ion-button>
+  <div id="cover">
+    <div id="customer">
+      <img src="../../assets/imgs/noun_customer_3201828.png" alt="customer">
+      <ion-button id="customer" size="large" type="submit" [routerLink]="['/register-user']" expand="block">CUSTOMER</ion-button>
+    </div>
+    <div id = "farm-owner">
+      <img src="../../assets/imgs/farmer.png" alt="farm">
+      <ion-button id="farmer" size="large" type="submit" [routerLink]="['/register-farmer']">FARM OWNER</ion-button>
+</div>
   </div>
 </ion-content>

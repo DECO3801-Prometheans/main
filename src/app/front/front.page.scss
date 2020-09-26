@@ -1,51 +1,35 @@
-#logo {
-    padding: 0% 40%;
-    max-height: 100px;
-    position: relative;
-}
-
-#logo-base {
-    background: #528053;
+#cover {
     display: flex;
     flex-direction: column;
-    padding-top: 50%;
-    padding-bottom: 45%;
-}
-
-#logo-base > h1 {
-    text-align: center;
-    font-size: 40px;
-    color: white;
-}
-
-#logo-base > p {
-    text-align: center;
-    font-size: 11px;
-    color: white;
-    
-}
-
-ion-content {
-    background: #528053;
-}
-
-#account {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-#farmer,#customer {
-    width: 50%;
-    height: 70px;
-    --border-radius: 0%;
-}
-
-#farmer {
-    --background: white;
-    color: black;
 }
 
 #customer {
-    --background: #84A032;
+    background: #F2CB04;
+    color: black;
+}
+
+#farm-owner {
+    background: #528053;
+}
+
+#customer, #farm-owner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    max-width: 35%;
+    margin-top: 17%;
+}
+
+#customer > ion-button {
+    --background: #F2CB04;
+    margin-bottom: 19%;
+}
+
+#farm-owner > ion-button {
+    --background: #528053;
+    margin-bottom: 10%;
+    
 }
