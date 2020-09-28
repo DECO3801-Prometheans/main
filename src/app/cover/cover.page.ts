@@ -12,7 +12,7 @@ export class CoverPage implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-      this.router.navigate(['/front']); 
+      this.router.navigate(['/tabs']); 
       }, 5000);
   }
 }

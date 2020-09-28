@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { EnvService } from './env.service';
 import { Storage } from '@ionic/storage';
@@ -24,7 +24,11 @@ export class ProductService {
     )
   }
 
-  getCategories(category: String) {
-    return this.http.get(this.env.API_URL + '/types/category/' + category);
+  getCategories(category: String, auth_token) {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${auth_token}`
+    })
+    return this.http.get(this.env.API_URL + '/types/category/' + category, { headers: headers });
   }
 }
