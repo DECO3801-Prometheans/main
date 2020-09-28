@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
 import { UserService } from 'src/app/services/user.service';
+import { UtilsService } from '../services/utils.service';
+import { ProductDetailPage } from '../product-detail/product-detail.page';
 
 @Component({
   selector: 'app-browse',
@@ -22,6 +24,7 @@ export class BrowsePage implements OnInit {
     private route: ActivatedRoute,
     private productService: ProductService,
     private userService: UserService,
+    private utilsService: UtilsService,
   ) { }
 
   ngOnInit() {
@@ -36,4 +39,11 @@ export class BrowsePage implements OnInit {
     console.log(res);
     this.products = res;
   }
+
+  async showProductDetail(product) {
+    await this.utilsService.showModal(ProductDetailPage, {
+      'product': product
+    });
+  }
+
 }
