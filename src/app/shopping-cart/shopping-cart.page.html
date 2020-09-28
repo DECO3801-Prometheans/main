@@ -2,15 +2,69 @@
 
 <ion-content>
     <div id="heading">
-        <h4>Recently Viewed Items</h4>
+        <img src="../../assets/imgs/location.png">
+        <h3>Select your delivery address</h3>
+    </div>
+    <div id="sub-heading">
+        <h4>Cart</h4>
         <ion-button>Manage</ion-button>
     </div>
     <div id="items">
-        <img src="../../assets/imgs/best-seller/meat.PNG" alt="meat">
+        <div id="container">
+            <div id="round">
+              <input type="checkbox" id="checkbox" />
+              <label for="checkbox"></label>
+            </div>
+        </div>
+        <img src="../../assets/imgs/pexels-julia-1327838.jpg" alt="vege">
         <div id="items-info">
             <p>Product Name & Description</p>
-            <p>AU</p>
-            <ion-button>Remove From List</ion-button>
+            <p>------</p>
+            <p>------</p>
+            <p>$ 4.50/kg</p>
+            <p>In stock/ Out of stock</p>
+            <div id="quantity">
+                <ion-button><img src="../../assets/imgs/minus.png"></ion-button>
+                <form action="/action_page.php">
+                    <input type="number" id="qunatity" name="quantity">
+                  </form>
+                <ion-button><img src="../../assets/imgs/add.png"></ion-button>
+            </div>
         </div>
+    </div>
+    <div id="items">
+        <div id="container">
+            <div id="round">
+              <input type="checkbox" id="checkbox" />
+              <label for="checkbox"></label>
+            </div>
+        </div>
+        <img src="../../assets/imgs/pexels-lisa-fotios-1395958.jpg" alt="meat">
+        <div id="items-info">
+            <p>Product Name & Description</p>
+            <p>------</p>
+            <p>------</p>
+            <p>$ 4.50/kg</p>
+            <p>In stock/ Out of stock</p>
+            <div id="quantity">
+                <ion-button><img src="../../assets/imgs/minus.png"></ion-button>
+                <form action="/action_page.php">
+                    <input type="number" id="qunatity" name="quantity">
+                  </form>
+                <ion-button><img src="../../assets/imgs/add.png"></ion-button>
+            </div>
+        </div>
+    </div>
+
+    <div id="checkout">
+        <div id="container">
+            <div id="round">
+                <input type="checkbox" id="checkbox" />
+                <label for="checkbox"></label>
+            </div>
+        </div>
+        <p>Select all</p>
+        <p>Total (2 items): $00</p>
+        <ion-button>Check Out</ion-button>
     </div>
 </ion-content>
