@@ -136,21 +136,27 @@ export class HomePage implements OnInit {
   async ngOnInit() {
     await this._utils.showLoading({
       message: 'Loading...',
-      duration: 5000,
+      duration: 3000,
     });
-    let user = await this._user.getUser().toPromise();
-    this._utils.hideLoading();
-    if(!user) {
-      this._utils.presentAlert({
-        header: 'Alert',
-        message: 'Couldn\'t load data!',
-        buttons: ['OK']
-      });
+    if (this._user.isLoggedIn == true) {
+      let user = await this._user.getUser().toPromise();
+      this._utils.hideLoading();
+      if(!user) {
+        this._utils.presentAlert({
+          header: 'Alert',
+          message: 'Couldn\'t load data!',
+          buttons: ['OK']
+        });
+  
+      } else {
+        this._utils.setStorage('userInfo', {value: user});
+        this.userInfo = user;
+      }
+      this.userInfo.type = 'farmer';
     } else {
-      this._utils.setStorage('userInfo', {value: user});
-      this.userInfo = user;
+      this.userInfo.type = 'notloggedin';
     }
-    this.userInfo.type = 'farmer';
+    
   }
 
   browseCategory(c) {

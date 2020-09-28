@@ -1,5 +1,81 @@
 <app-header></app-header>
-
+<ion-content *ngIf="userInfo.type==='notloggedin'">
+    <ion-slides>
+        <ion-slide *ngFor="let item of slides">
+            <ion-row size="12">
+                <ion-col class="slide-col">
+                  <img [src]="item">
+                </ion-col>
+            </ion-row>
+        </ion-slide>
+    </ion-slides>
+    <div>
+        <p>Sign in for the best experience</p>
+        <button [routerLink]="['/login']">Sign In</button>
+        <a [routerLink]="['/register-user']">Create an Account</a>
+    </div>
+    <ion-row size="12">
+        <ion-col class="section">
+            <img (click)="browseCategory('dairy')" src="../../assets/imgs/food 1.JPG">
+            <ion-row><div>Dairy</div></ion-row>
+        </ion-col>
+        <ion-col class="section">
+            <img (click)="browseCategory('meat')" src="../../assets/imgs/meat.JPG">
+            <ion-row><div>Protein</div></ion-row>
+        </ion-col>
+        <ion-col class="section">
+            <img (click)="browseCategory('fruit')"  src="../../assets/imgs/fruit.JPG">
+            <ion-row><div>Fruit</div></ion-row>
+        </ion-col>
+        <ion-col (click)="browseCategory('vegetable')" class="section">
+            <img src="../../assets/imgs/veg.JPG">
+            <ion-row><div>Vegetable</div></ion-row>
+        </ion-col>
+        <ion-col (click)="browseCategory('grain')" class="section">
+            <img src="../../assets/imgs/grain.JPG">
+            <ion-row><div>Grains</div></ion-row>
+        </ion-col>
+    </ion-row>
+    <div class="best-sellers-section">
+        <ion-row class="best-sellers-title">
+            <h3>Best Sellers</h3>
+        </ion-row>
+        <ion-row class="best-sellers-row" *ngFor="let row of best_sellers">
+           <div>
+            <ion-col *ngFor="let item of row">
+                <img [src]="item.img">
+                <p>{{item.brief}}</p>
+                <p class="price">
+                   AU {{item.price | currency}}
+                </p>
+            </ion-col>
+           </div>
+        </ion-row>
+    </div>
+    <div class="bargain">
+        <ion-row class="bargain-title">
+            <h3>Bargain</h3>
+        </ion-row>
+        <ion-row class="bargain-row" *ngFor="let row of bargains">
+           <div>
+            <ion-col *ngFor="let item of row">
+                <img [src]="item.img">
+                <p>{{item.brief}}</p>
+                <p class="price">
+                   AU {{item.price * (1 - item.discount) | currency}}
+                </p>
+                <p class="discount">
+                    <ion-text>AU {{item.price | currency}}</ion-text>
+                    {{item.discount * 100}}% off
+                </p>
+            </ion-col>
+           </div>
+        </ion-row>
+    </div>
+    <div class="farmers-section">
+        <app-recommend-farmer *ngFor="let farmer of farmers" [farmer]="farmer"></app-recommend-farmer>
+    </div>
+</ion-content>
 <ion-content *ngIf="userInfo.type==='customer'">
     <ion-slides>
         <ion-slide *ngFor="let item of slides">
