@@ -1,0 +1,29 @@
+ion-content {
+    --background: black;
+}
+
+#box {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+
+#content > h3 {
+    margin: 0px;
+    padding: 4% 2% 0%;
+}
+
+#content > p {
+    font-size: 12px;
+}
+
+#address > ion-button {
+    height: 85px;
+    --background: white;
+    color: #528053;
+    border: 1px solid black;
+    text-align: left;
+    border-radius: 10px;
+    width: 100px;
+}
