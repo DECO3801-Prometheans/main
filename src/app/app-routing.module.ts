@@ -62,6 +62,22 @@ const routes: Routes = [
     path: 'shopping-cart-modal',
     loadChildren: () => import('./shopping-cart-modal/shopping-cart-modal.module').then( m => m.ShoppingCartModalPageModule)
   },
+  {
+    path: 'add-payment',
+    loadChildren: () => import('./add-payment/add-payment.module').then( m => m.AddPaymentPageModule)
+  },
+  {
+    path: 'exp-date',
+    loadChildren: () => import('./exp-date/exp-date.module').then( m => m.ExpDatePageModule)
+  },
+  {
+    path: 'cvv',
+    loadChildren: () => import('./cvv/cvv.module').then( m => m.CvvPageModule)
+  },
+  {
+    path: 'pay-payment',
+    loadChildren: () => import('./pay-payment/pay-payment.module').then( m => m.PayPaymentPageModule)
+  },
 
 
 ];
