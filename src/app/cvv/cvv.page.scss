@@ -1,5 +1,5 @@
 #top-bar {
-    background:#638d64;
+    background:#66cc33;
 }
 
 #top-bar > img {
@@ -30,7 +30,7 @@
     flex-direction: column;
     margin: 10px;
     color: grey;
-    border: grey;
+    border: #e4e4e4;
     
 }
 
@@ -40,7 +40,7 @@
 
 #security-details {
     color: grey;
-    border: grey;
+    border: #e4e4e4;
     display: flex;
     flex-direction: row;
     margin: 10px;
@@ -64,7 +64,7 @@
 }
 
 #cvv-details > p {
-    color: grey;
+    color:grey;
     text-align: justify;
 }
 
