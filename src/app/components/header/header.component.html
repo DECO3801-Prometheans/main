@@ -6,7 +6,7 @@
     </ion-icon>
     </ion-button>
     <ion-searchbar [value]="keyWord" (ionChange)="_change($event)" (keypress)="searchItems($event)"></ion-searchbar>
-    <ion-button class="cart">
+    <ion-button class="cart" (click)="cart()">
       <ion-icon name="cart-outline"></ion-icon>
     </ion-button>
   </div>

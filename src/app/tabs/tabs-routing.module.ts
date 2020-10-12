@@ -24,10 +24,22 @@ const routes: Routes = [
         loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
       },
       {
+        path: 'shopping-cart',
+        loadChildren: () => import('../shopping-cart/shopping-cart.module').then( m => m.ShoppingCartPageModule)
+      },
+      {
+        path: 'shopping-cart-modal',
+        loadChildren: () => import('../shopping-cart-modal/shopping-cart-modal.module').then( m => m.ShoppingCartModalPageModule)
+      },
+      {
+        path: 'pay-payment',
+        loadChildren: () => import('../pay-payment/pay-payment.module').then( m => m.PayPaymentPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'
-      }
+      },
     ]
   },
   {

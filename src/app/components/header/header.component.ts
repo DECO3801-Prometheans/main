@@ -64,4 +64,8 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  cart() {
+    this.router.navigate(['/tabs/shopping-cart']);
+  }
+
 }
