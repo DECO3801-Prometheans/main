@@ -1,0 +1,24 @@
+#time {
+    color: white;
+    background: black;
+    padding: 1%;
+}
+
+#product {
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+}
+
+#description {
+    border: grey solid 1px;
+    border-radius: 5px;
+    height: 50px;
+}
+
+ion-button {
+    --background: #F2CB04;
+    color: black;
+    width: fit-content;
+    align-self: flex-end;
+}
