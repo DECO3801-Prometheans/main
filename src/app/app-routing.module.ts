@@ -55,14 +55,6 @@ const routes: Routes = [
     loadChildren: () => import('./product-detail/product-detail.module').then( m => m.ProductDetailPageModule)
   },
   {
-    path: 'shopping-cart',
-    loadChildren: () => import('./shopping-cart/shopping-cart.module').then( m => m.ShoppingCartPageModule)
-  },
-  {
-    path: 'shopping-cart-modal',
-    loadChildren: () => import('./shopping-cart-modal/shopping-cart-modal.module').then( m => m.ShoppingCartModalPageModule)
-  },
-  {
     path: 'add-payment',
     loadChildren: () => import('./add-payment/add-payment.module').then( m => m.AddPaymentPageModule)
   },
