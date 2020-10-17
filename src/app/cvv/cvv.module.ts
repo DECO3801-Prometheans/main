@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { MatExpansionModule } from '@angular/material/expansion';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -14,8 +13,7 @@ import { CvvPage } from './cvv.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    CvvPageRoutingModule,
-    MatExpansionModule,
+    CvvPageRoutingModule
   ],
   declarations: [CvvPage]
 })
