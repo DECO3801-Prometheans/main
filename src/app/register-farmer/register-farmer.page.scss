@@ -5,7 +5,7 @@
 }
 
 #logo-base {
-    background: #528053;
+    background: #20AA38;
     margin: -4% -4% 10%;
     align-content: center;
     display: flex;
@@ -15,7 +15,7 @@
 
 #logo-base > h2 {
     color: white;
-    padding-left: 19%;
+    text-align: center;
 }
 
 #credential > img {
@@ -27,4 +27,12 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+}
+
+ion-button {
+    --background: black;
+}
+
+#login > p > a {
+    color: #20AA38;
 }

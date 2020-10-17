@@ -98,6 +98,10 @@ const routes: Routes = [
     path: 'group-purchase-amount',
     loadChildren: () => import('./group-purchase-amount/group-purchase-amount.module').then( m => m.GroupPurchaseAmountPageModule)
   },
+  {
+    path: 'confirmation',
+    loadChildren: () => import('./confirmation/confirmation.module').then( m => m.ConfirmationPageModule)
+  },
 
 
 ];

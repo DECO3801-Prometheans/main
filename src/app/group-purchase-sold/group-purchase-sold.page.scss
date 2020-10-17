@@ -4,12 +4,12 @@
 }
 
 #buy > ion-button {
-    --background: red;
+    --background: black;
 }
 
 #image > img {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     height: 180px;
 }
 
@@ -28,8 +28,8 @@
 #item {
     display: flex;
     flex-direction: column;
-    border: solid 1px black;
-    border-radius: 20px;
+    border: solid 1px white;
+    border-radius: 10px;
     width: 40%;
     margin: 5%;
     box-shadow: 0 4px 8px 0 #0003, 0 6px 20px 0 #00000030; 

@@ -1,12 +1,12 @@
 ion-toolbar {
     ion-item {
         ion-label {
-            color: #41AC3C;
+            color: #20AA38;
             font-weight: bold;
             font-weight: 2vw;
         }
         ion-select {
-            color: #41AC3C;
+            color: #20AA38;
             font-weight: bold;
             font-weight: 2vw;
         }
@@ -14,7 +14,7 @@ ion-toolbar {
 }
 ion-content {
     .main-content {
-        background: #99ffbc;
+        background: #C2F0B2;
         min-height: 100vh;
         padding-top: 3vh;
         .product-cards {
@@ -44,19 +44,19 @@ ion-content {
                     height: 30vw;
                     h4 {
                         margin: 1vw 0;
-                        color: #41AC3C;
+                        color: #20aa38;
                         font-weight: bold;
                     }
                     p {
                         margin: 0;
                     }
                     .price {
-                        color: #41AC3C;
+                        color: #20aa38;
                         font-size: 2vw;
                     }
                     .brief {
                         font-size: 1.8vw;
-                        color: gray;
+                        color: #777777;
                     }
                 }
             }

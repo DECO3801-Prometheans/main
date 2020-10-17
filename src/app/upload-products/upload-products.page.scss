@@ -1,7 +1,7 @@
 #add-photos, #title, #price, #delivery, #product-description {
     margin: 2%;
-    color: grey;
-    border-radius: 8px;
+    color: #777777;
+    border-radius: 10px;
 }
 
 #product-description, #add-photos {
@@ -17,5 +17,6 @@
 #box > ion-button {
     width: fit-content;
     position: relative;
-    right: -77%
+    right: -77%;
+    --background: black;
 }

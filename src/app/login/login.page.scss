@@ -6,7 +6,7 @@
 }
 
 #logo-base {
-    background: #4e924e;
+    background: #20AA38;
     padding: 0%;
     margin: -4% -4% 10%;
     align-content: center;
@@ -19,8 +19,15 @@
 }
 
 #forgot {
-    color: black;
     padding: 5% 5% 0% 5%;
+}
+
+#forgot > a {
+    color: #20AA38;
+}
+
+ion-button {
+    --background: black;
 }
 
 #signup {
@@ -34,3 +41,12 @@
     flex-direction: row;
     padding: 10%;
 }
+
+#signup > p > a {
+    color: #20AA38;
+}
+
+ion-col > ion-button {
+    height: fit-content;
+}
+
