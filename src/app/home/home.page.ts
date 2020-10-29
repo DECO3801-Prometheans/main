@@ -136,7 +136,7 @@ export class HomePage implements OnInit {
   async ngOnInit() {
     await this._utils.showLoading({
       message: 'Loading...',
-      duration: 3000,
+      duration: 5000,
     });
     if (this._user.isLoggedIn == true) {
       let user = await this._user.getUser().toPromise();

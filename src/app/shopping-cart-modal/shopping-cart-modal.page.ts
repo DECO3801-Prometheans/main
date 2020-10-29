@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-shopping-cart-modal',
   templateUrl: './shopping-cart-modal.page.html',
   styleUrls: ['./shopping-cart-modal.page.scss'],
 })
-export class ShoppingCartModalPage implements OnInit {
+export class ShoppingCartModalPage {
 
-  constructor() { }
+  constructor(
+    private modalCtrl:ModalController
+  ) { }
 
-  ngOnInit() {
+  closeModal()
+  {
+    this.modalCtrl.dismiss();
   }
 
 }

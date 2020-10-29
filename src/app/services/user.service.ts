@@ -44,7 +44,7 @@ export class UserService {
 
   register(fName: String, lName: String, type: String, email: String, address: String, mobile: String, password: String) {
     return this.http.post(this.env.API_URL + '/users',
-      {email: email, password: password, type: type, first_name: fName, last_name: lName, address: address, phone: mobile}
+      {email: email, password: password, type: type, first_name: fName, last_name: lName, address: address, phone: mobile }
     )
   }
 

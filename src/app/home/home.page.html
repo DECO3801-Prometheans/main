@@ -11,8 +11,7 @@
     </ion-slides>
     <div>
         <p>Sign in for the best experience</p>
-        <button [routerLink]="['/login']">Sign In</button>
-        <a [routerLink]="['/register-user']">Create an Account</a>
+        <button [routerLink]="['/front']">Sign In</button>
     </div>
     <ion-row size="12">
         <ion-col class="section">
@@ -38,7 +37,7 @@
     </ion-row>
     <div class="best-sellers-section">
         <ion-row class="best-sellers-title">
-            <h3>Best Sellers</h3>
+            <h3 [routerLink]="['/tabs/group-purchase']">Group Purchases</h3>
         </ion-row>
         <ion-row class="best-sellers-row" *ngFor="let row of best_sellers">
            <div>
@@ -54,7 +53,7 @@
     </div>
     <div class="bargain">
         <ion-row class="bargain-title">
-            <h3>Bargain</h3>
+            <h3>Best Sellers</h3>
         </ion-row>
         <ion-row class="bargain-row" *ngFor="let row of bargains">
            <div>

@@ -26,3 +26,8 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 @import "colors";
+
+.my-custom-modal-css .modal-wrapper {
+    background: rgba(0, 0, 0, 0) !important;
+    padding: 20% 0%  !important;
+ }

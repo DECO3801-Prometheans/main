@@ -36,6 +36,34 @@ const routes: Routes = [
         loadChildren: () => import('../pay-payment/pay-payment.module').then( m => m.PayPaymentPageModule)
       },
       {
+        path: 'cvv',
+        loadChildren: () => import('../cvv/cvv.module').then( m => m.CvvPageModule)
+      },
+      {
+        path: 'group-purchase',
+        loadChildren: () => import('../group-purchase/group-purchase.module').then( m => m.GroupPurchasePageModule)
+      },
+      {
+        path: 'group-purchase-timeout',
+        loadChildren: () => import('../group-purchase-timeout/group-purchase-timeout.module').then( m => m.GroupPurchaseTimeoutPageModule)
+      },
+      {
+        path: 'group-purchase-sold',
+        loadChildren: () => import('../group-purchase-sold/group-purchase-sold.module').then( m => m.GroupPurchaseSoldPageModule)
+      },
+      {
+        path: 'group-purchase-product-details',
+        loadChildren: () => import('../group-purchase-product-details/group-purchase-product-details.module').then( m => m.GroupPurchaseProductDetailsPageModule)
+      },
+      {
+        path: 'group-purchase-amount',
+        loadChildren: () => import('../group-purchase-amount/group-purchase-amount.module').then( m => m.GroupPurchaseAmountPageModule)
+      },
+      {
+        path: 'confirmation',
+        loadChildren: () => import('../confirmation/confirmation.module').then( m => m.ConfirmationPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'
